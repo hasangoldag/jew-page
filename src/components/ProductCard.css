@@ -1,0 +1,78 @@
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 250px;
+  text-align: center;
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-details {
+  margin-top: 10px;
+}
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.color-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.color-button.yellow {
+  background-color: #eec897;
+}
+
+.color-button.white {
+  background-color: #d9d9d9;
+}
+
+.color-button.rose {
+  background-color: #e1a4a9;
+}
+
+.color-button.active {
+  border: 2px solid #000;
+}
+
+.popularity-score {
+  margin-top: 10px;
+
+  color: #555;
+  font-family: "Avenir-Book.ttf", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+.product-price {
+  font-family: "Montserrat-Regular.ttf", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.selected-color {
+  font-family: "Avenir-Book.ttf", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+}
+h3 {
+  font-family: "Montserrat-Medium.ttf", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+}
+.popularity-score .fa-star,
+.popularity-score .fa-star-half-alt,
+.popularity-score .fa-star-regular {
+  color: gold; /* Sarı renk */
+}
+

@@ -1,0 +1,109 @@
+.product-carousel {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;  /* Yatay kaydırma çubuğu otomatik olarak görünsün */
+  padding-bottom: 10px; /* Scroll bar görünürlüğü için biraz alt boşluk */
+  display: flex;
+  justify-content: center;
+  scroll-snap-type: x mandatory; /* Kaydırma, öğelerin hizalanmasını sağlamak için */
+}
+
+.product-list {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  scroll-snap-align: start; /* Ürünlerin düzgün kaymasını sağlar */
+}
+
+.product-card {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 10px;
+  scroll-snap-align: start; /* Ürünlerin düzgün hizalanması */
+}
+
+/* Kaydırma çubuğu stilini özelleştirme */
+.product-carousel::-webkit-scrollbar {
+  height: 8px; /* Yatay kaydırma çubuğunun yüksekliği */
+}
+
+.product-carousel::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.product-carousel::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.product-carousel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Sağ ve Sol oklar */
+.carousel-btn {
+  background: none;
+  position: fixed;
+  top: 40%;
+  transform: translateY(-50%);
+  color: black;
+  border: none;
+  font-size: 30px;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Mobil uyumlu ve küçük ekranlar için responsive */
+@media (max-width: 1024px) {
+  .product-card {
+    width: 50%;
+  }
+  .carousel-btn {
+    width: 30px;
+    height: 30px;
+    top: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+  }
+
+  .carousel-btn {
+    width: 20px;
+    height: 20px;
+    top: 30%;
+  }
+}
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
+
+  .carousel-btn {
+    width: 20px;
+    height: 20px;
+    top: 25%;
+  }
+}
+@media (max-width: 375px) {
+  .product-card {
+    width: 100%;
+  }
+
+  
+  .carousel-btn {
+    width: 20px;
+    height: 20px;
+    top: 45%;
+  }
+}
